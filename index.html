@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Calendar</title>
+    <style>
+        /* Base page styling with a vibrant gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background-attachment: fixed;
+        }
+
+        /* Glassmorphism Container */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); /* Safari support */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        /* Header styling inside the glass */
+        h1 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive iframe container */
+        .calendar-wrapper {
+            background: #ffffff; /* Keeps the calendar interface readable */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Override the iframe's fixed width to make it responsive */
+        iframe {
+            width: 100%;
+            display: block;
+            border: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-panel">
+        <h1>Team Calendar</h1>
+        <div class="calendar-wrapper">
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FSeoul&showPrint=0&src=b2dpbWk0MzRAZ21haWwuY29t&src=NzhjNGZkMzMxZjRkYmNkOGFiZjU5MTBlZDQ2YTczMzQ2ZGFjY2M4NmVkMDIwMGJiMzBmZmQxYWFhYzA1NDZjNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=a28uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23f09300&color=%23ad1457&color=%230b8043" 
+                height="600" 
+                frameborder="0" 
+                scrolling="no">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>
